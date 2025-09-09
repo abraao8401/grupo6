@@ -1,0 +1,98 @@
+# Documento de Visão – EasyStop
+
+## 1. Introdução
+O **EasyStop** é um sistema inteligente de gestão de estacionamento que visa otimizar o controle de entrada e saída de veículos, a alocação de vagas por meio de sugestões de vagas livres, o faturamento e a geração de relatórios operacionais.  
+
+Este documento apresenta a visão geral do sistema, resumindo seus objetivos, suas funcionalidades principais, seus principais usuários envolvidos e os requisitos essenciais.
+
+---
+
+## 2. Objetivo
+O objetivo do **EasyStop** é automatizar e agilizar o processo de atendimento em estacionamentos, oferecendo aos atendentes e aos administradores ferramentas para:  
+
+- Registro rápido de entrada e saída.  
+- Sugestão inteligente de vagas.  
+- Controle e alerta de ocupação.  
+- Geração de métricas operacionais e financeiras.  
+
+---
+
+## 3. Escopo
+O EasyStop contempla os seguintes módulos:  
+
+- Registro de entrada e saída de veículos.  
+- Sugestão automática de vagas.  
+- Visualização de mapa sugestivo de vagas disponíveis.  
+- Controle de ocupação e alertas de lotação.  
+- Registro de pagamentos e encerramento de atendimento.  
+- Geração de relatórios e exportação de métricas.  
+- Monitoramento de histórico e frequência de clientes.  
+
+---
+
+## 4. Stakeholders
+- **Atendente:** Realiza check-in, check-out, orienta clientes e registra pagamentos.  
+- **Cliente:** Usuário do estacionamento que interage indiretamente com o sistema.  
+- **Gestor/Administrador:** Acompanha métricas, gera relatórios e realiza auditorias.  
+- **Sistema EasyStop:** Plataforma que executa os processos automatizados.  
+
+---
+
+## 5. Visão Geral do Produto
+O **EasyStop** será uma aplicação web responsiva, compatível com navegadores modernos e dispositivos como tablets e desktops.  
+
+Seu diferencial está na sugestão automática de vagas com base em algoritmos de priorização, além de alertas inteligentes e relatórios exportáveis em formatos **CSV** e **PDF**.  
+
+---
+
+## 6. Funcionalidades Principais
+
+### Épico: Registro de Entrada e Saída de Veículos
+- **HU-01:** Registrar check-in com placa, horário e vaga  
+- **HU-02:** Check-out com cálculo automático de fatura  
+- **HU-03:** Registro de pagamento e encerramento de atendimento  
+
+### Épico: Visualização e Orientação de Vagas
+- **HU-04:** Mapa interativo com status das vagas  
+- **HU-05:** Sugestão automática de vaga livre  
+
+### Épico: Controle de Vagas e Alertas de Lotação
+- **HU-06:** Monitoramento em tempo real da ocupação  
+- **HU-07:** Alerta visual e sonoro ao atingir 85% de lotação  
+
+### Épico: Relatórios e Métricas
+- **HU-08:** Relatório diário de faturamento  
+- **HU-09:** Tempo médio de permanência  
+- **HU-10:** Horários de pico de ocupação  
+- **HU-11:** Histórico e frequência de clientes  
+
+---
+
+## 7. Requisitos Funcionais e Não Funcionais
+
+### Requisitos Funcionais
+- **RF-1 a RF-5** conforme detalhados no documento original de ensaio.  
+
+### Requisitos Não Funcionais
+- **RNF-1:** Desempenho com resposta em até 2 segundos.  
+- **RNF-2:** Disponibilidade mínima de 99,5%.  
+- **RNF-3:** Usabilidade com interface limpa e responsiva.  
+- **RNF-4:** Segurança com criptografia e auditoria.  
+- **RNF-5:** Escalabilidade para até 1.000 vagas.  
+- **RNF-6:** Confiabilidade com backup diário.  
+- **RNF-7:** Compatibilidade com navegadores e dispositivos.  
+
+---
+
+## 8. Restrições
+- O sistema deve operar em ambiente web.  
+- Deve suportar múltiplos atendentes simultâneos.  
+- Exportações devem ser limitadas aos formatos **CSV** e **PDF**.  
+
+---
+
+## 9. Critérios de Sucesso
+- Redução do tempo médio de atendimento por cliente.  
+- Precisão na sugestão de vagas e cálculo de faturas.  
+- Disponibilidade contínua e confiável do sistema.  
+- Relatórios gerenciais acessíveis e exportáveis.  
