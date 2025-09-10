@@ -18,6 +18,11 @@
 * O horário de entrada é sempre o horário da finalização do processo.
 * A placa do veículo é o identificador do cliente no estacionamento.
 
+**Fluxos de Exceção:**
+* **FA1:** O atendente tenta registrar um veículo, mas não há vagas disponíveis. → O sistema exibe mensagem de "Estacionamento Lotado" e não permite concluir o check-in.
+* **FA2:** O atendente digita a placa incorretamente ou deixa em branco. → O sistema solicita que a placa seja corrigida antes de concluir.
+* **FA3:** O atendente seleciona uma vaga, mas o motorista estaciona em outra diferente. → O atendente deve atualizar manualmente no sistema a vaga correta antes de finalizar o check-in.
+
 ---
 
 ## 2. Caso de Uso: Registrar Check-out do Veículo
@@ -37,6 +42,11 @@
 **Regra de Negócio:**
 * O cálculo do valor deve ser feito automaticamente.
 
+**Fluxos de Exceção:**
+* **FA1:** O atendente tenta realizar check-out de uma placa que não foi registrada no sistema. → O sistema exibe erro e solicita nova verificação.
+* **FA2:** O sistema falha ao calcular o valor (ex.: tarifa não configurada). → O atendente é notificado para informar ao gerente.
+* **FA3:** O cliente não realiza o pagamento no caixa. → O check-out não pode ser concluído até o pagamento ser confirmado.
+
 ---
 
 ## 3. Caso de Uso: Gerar Relatórios
@@ -53,6 +63,10 @@
     * Tempo médio de permanência (tempo total / número de veículos).
     * Faturamento diário (soma dos valores pagos).
 
+**Fluxos de Exceção:**
+* **FA1:** O gerente acessa os relatórios, mas não há registros no período selecionado. → O sistema exibe mensagem "Sem dados disponíveis para este período".
+* **FA2:** O sistema não consegue gerar relatório por falha de conexão ou dados inconsistentes. → O gerente é notificado e solicitado a tentar novamente mais tarde.
+
 ---
 
 ## 4. Caso de Uso: Gerenciar Vagas
@@ -65,3 +79,7 @@
 1. O sistema exibe as vagas disponíveis e ocupadas em um mapa do estacionamento.
 2. Quando o estacionamento estiver lotado, o sistema envia uma notificação.
 3. Quando houver vagas liberadas, o sistema atualiza automaticamente a disponibilidade.
+
+**Fluxos de Exceção:**
+* **FA1:** O sistema marca uma vaga como ocupada, mas o veículo sai sem fazer check-out. → O atendente pode corrigir manualmente a disponibilidade da vaga.
+* **FA2:** O sistema notifica lotação máxima, mas após liberação de vagas, não atualiza o status automaticamente. → O atendente pode atualizar manualmente a lista de vagas.
